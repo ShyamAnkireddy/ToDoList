@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="dolist.css">
+    <script src="dolist.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Do List<i class="fa-solid fa-list-check"></i></h2>
+        <div class="add">
+            <input type="text" id="task" placeholder="Enter your task" maxlength="30" oninput="updateCharacterCount()" spellcheck="false">
+            <div id="charCount">30/30</div>
+            <button onclick="addTask()"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="controls">
+            <div class="filters">
+                <select id="filterDropdown" onchange="showTodo()">
+                    <option value="all">All</option>
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+            <button class="clear-btn" onclick="clearAllTasks()">Clear All</button>
+        </div>
+
+        <ul class="task-box">
+    
+        </ul>
+
+    </div>
+</body>
+
+</html>
